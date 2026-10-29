@@ -1,0 +1,742 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Knock Out Club · Boxeo y Muay Thai en Ermua</title>
+<meta name="description" content="Gimnasio de boxeo, muay thai, kick boxing y defensa personal en Ermua (Bizkaia). Entrenadores federados, ring y nave equipada. Pide tu clase de prueba por WhatsApp.">
+<meta name="theme-color" content="#0a0e19">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Knock Out Club · Boxeo y Muay Thai en Ermua">
+<meta property="og:description" content="Ring, sacos, zona de fuerza y entrenadores federados. Ven, prueba y decide.">
+<meta property="og:image" content="https://ggeelcano.github.io/koclub/img/sala-ring-800.jpg">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="450">
+<meta property="og:url" content="https://ggeelcano.github.io/koclub/">
+<meta property="og:site_name" content="Knock Out Club">
+<link rel="canonical" href="https://ggeelcano.github.io/koclub/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/sala-ring.jpg" imagesrcset="img/sala-ring-800.jpg 800w, img/sala-ring.jpg 1600w" imagesizes="100vw">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ExerciseGym",
+  "name": "Knock Out Club",
+  "description": "Gimnasio de boxeo, muay thai, kick boxing y defensa personal en Ermua.",
+  "telephone": "+34647417900",
+  "image": "https://ggeelcano.github.io/koclub/img/sala-ring.jpg",
+  "url": "https://ggeelcano.github.io/koclub/",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Bizkaia Etorbidea 35 A, pabellón 6-7",
+    "postalCode": "48260",
+    "addressLocality": "Ermua",
+    "addressRegion": "Bizkaia",
+    "addressCountry": "ES"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 43.1852416, "longitude": -2.5097424 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:30", "closes": "13:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "16:30", "closes": "21:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "13:00" }
+  ]
+}
+</script>
+<style>
+:root{
+  --ink:#0a0e19;
+  --ink-2:#111829;
+  --ink-3:#1a2238;
+  --line:#2a3350;
+  --text:#f3f4f7;
+  --muted:#aab3c7;
+  --blue:#1e4fd6;
+  --blue-2:#6f93ff;
+  --red:#d3192b;
+  --red-2:#ff3d4f;
+  --paper:#f3f0ea;
+  --paper-ink:#141824;
+  --paper-muted:#4a5165;
+  --radius:14px;
+  --wrap:1180px;
+  --display:"Anton",Impact,"Arial Narrow Bold",sans-serif;
+  --body:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ink);color:var(--text);font:400 1.0625rem/1.6 var(--body)}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--display);font-weight:400;letter-spacing:.01em;line-height:1.02;margin:0;text-transform:uppercase}
+p{margin:0}
+.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:12px;top:-60px;z-index:100;background:#fff;color:#000;padding:10px 16px;border-radius:8px;font-weight:700;text-decoration:none}
+.skip:focus{top:12px}
+:focus-visible{outline:3px solid #ffd23f;outline-offset:3px;border-radius:4px}
+
+/* Botones */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:48px;padding:.75em 1.35em;border-radius:999px;font:700 1rem/1.1 var(--body);letter-spacing:.02em;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:transform .15s ease,background-color .15s ease,border-color .15s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn svg{width:20px;height:20px;flex:none}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:#b8101f}
+.btn-ghost{border-color:rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+.btn-blue{background:var(--blue);color:#fff}
+.btn-blue:hover{background:#1741b5}
+
+/* Cabecera */
+.top{position:sticky;top:0;z-index:50;background:rgba(10,14,25,.92);backdrop-filter:saturate(140%) blur(10px);-webkit-backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid rgba(255,255,255,.07)}
+.top .wrap{display:flex;align-items:center;gap:16px;min-height:68px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;margin-right:auto;flex:none}
+.brand-badge{background:#fff;border-radius:10px;padding:4px 8px;display:flex}
+.brand img{height:42px;width:auto}
+.brand-txt{font:400 1.05rem/1 var(--display);letter-spacing:.04em;text-transform:uppercase;color:#fff}
+.nav{display:flex;gap:4px}
+.nav a{padding:10px 12px;border-radius:8px;text-decoration:none;font-weight:600;color:#dfe3ec}
+.nav a:hover{background:rgba(255,255,255,.07);color:#fff}
+.top .btn{min-height:42px;padding:.55em 1.1em;font-size:.95rem}
+.burger{display:none;width:46px;height:46px;border-radius:10px;border:1px solid rgba(255,255,255,.18);background:transparent;color:#fff;cursor:pointer;align-items:center;justify-content:center;flex:none}
+.burger svg{width:24px;height:24px}
+.menu-movil{display:none}
+
+/* Portada */
+.hero{position:relative;min-height:min(86vh,760px);display:flex;align-items:flex-end;isolation:isolate;overflow:hidden}
+.hero-img{position:absolute;inset:0;z-index:-2}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:60% 50%;animation:zoom 22s ease-out both}
+@keyframes zoom{from{transform:scale(1.08)}to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(10,14,25,.94) 0%,rgba(10,14,25,.78) 38%,rgba(10,14,25,.15) 75%),linear-gradient(0deg,rgba(10,14,25,.95) 0%,rgba(10,14,25,0) 45%)}
+.hero .wrap{padding-top:96px;padding-bottom:64px}
+.kicker{display:inline-flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;font-size:.82rem;color:#fff}
+.kicker::before{content:"";width:28px;height:3px;background:var(--red)}
+.hero h1{font-size:clamp(3rem,9vw,6.6rem);margin:18px 0 18px;max-width:11ch}
+.hero h1 em{font-style:normal;color:var(--red-2)}
+.hero .lead{font-size:clamp(1.08rem,1.8vw,1.25rem);color:#e6e9f0;max-width:34em}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.rating{display:inline-flex;align-items:center;gap:10px;margin-top:28px;font-weight:600;color:#e6e9f0;text-decoration:none}
+.rating .stars{color:#ffc93c;letter-spacing:2px}
+.rating b{font-size:1.15rem;color:#fff}
+.rating:hover span:last-child{text-decoration:underline}
+
+/* Franja de palabras */
+.ticker{background:var(--red);color:#fff;overflow:hidden;border-block:1px solid rgba(0,0,0,.2)}
+.ticker-track{display:flex;width:max-content;animation:tick 38s linear infinite}
+.ticker ul{display:flex;list-style:none;margin:0;padding:12px 0;gap:0}
+.ticker li{font:400 1.35rem/1 var(--display);text-transform:uppercase;letter-spacing:.04em;white-space:nowrap;display:flex;align-items:center;gap:26px;padding-right:26px}
+.ticker li::after{content:"";width:9px;height:9px;background:#fff;transform:rotate(45deg)}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* Datos rápidos */
+.facts{background:var(--ink-2);border-bottom:1px solid var(--line)}
+.facts ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+.facts li{padding:26px 20px;border-left:1px solid var(--line);display:flex;gap:14px;align-items:flex-start}
+.facts li:first-child{border-left:0}
+.facts svg{width:30px;height:30px;color:var(--blue-2);flex:none;margin-top:2px}
+.facts strong{display:block;font-size:1.05rem;color:#fff}
+.facts span{color:var(--muted);font-size:.95rem;line-height:1.4;display:block}
+
+/* Secciones */
+section{scroll-margin-top:76px}
+.sec{padding:96px 0}
+.sec-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px 40px;margin-bottom:44px}
+.sec-head h2{font-size:clamp(2.4rem,5.4vw,4rem);max-width:13ch}
+.sec-head p{max-width:30em;color:var(--muted)}
+.eyebrow{display:block;font:700 .82rem/1 var(--body);letter-spacing:.16em;text-transform:uppercase;color:var(--red-2);margin-bottom:14px}
+
+/* Disciplinas */
+.disc{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.card{position:relative;border-radius:var(--radius);overflow:hidden;background:var(--ink-3);display:flex;flex-direction:column;min-width:0}
+.card-img{aspect-ratio:4/5;overflow:hidden}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.card:hover .card-img img{transform:scale(1.05)}
+.card-body{padding:20px 20px 24px;display:flex;flex-direction:column;gap:10px;flex:1}
+.card h3{font-size:1.75rem}
+.card h3 small{display:block;font:700 .78rem/1.2 var(--body);letter-spacing:.14em;color:var(--blue-2);margin-bottom:6px}
+.card p{color:#c9cfdc;font-size:.98rem;line-height:1.5}
+.card .tag{position:absolute;top:14px;left:14px;background:rgba(10,14,25,.82);color:#fff;font:700 .75rem/1 var(--body);letter-spacing:.12em;text-transform:uppercase;padding:8px 10px;border-radius:999px}
+
+/* El club (fondo claro) */
+.club{background:var(--paper);color:var(--paper-ink)}
+.club .sec-head p{color:var(--paper-muted)}
+.club .eyebrow{color:var(--red)}
+.club-grid{display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:start}
+.fachada{position:sticky;top:96px;border-radius:var(--radius);overflow:hidden;box-shadow:0 20px 50px rgba(20,24,36,.18)}
+.fachada img{width:100%;aspect-ratio:1400/619;object-fit:cover}
+.fachada figcaption{background:#fff;padding:12px 16px;font-size:.92rem;color:var(--paper-muted)}
+.club-text p+p{margin-top:14px}
+.club-text p{color:#2b3142}
+.coaches{display:grid;gap:14px;margin-top:28px}
+.coach{background:#fff;border-radius:var(--radius);padding:20px 20px 18px;border-left:5px solid var(--blue);box-shadow:0 6px 20px rgba(20,24,36,.07)}
+.coach:nth-child(2){border-left-color:var(--red)}
+.coach h3{font-size:1.6rem;color:var(--paper-ink)}
+.coach .role{font-weight:700;color:var(--blue);font-size:.92rem;letter-spacing:.06em;text-transform:uppercase;margin:4px 0 10px}
+.coach:nth-child(2) .role{color:var(--red)}
+.coach ul{margin:0;padding-left:1.1em;color:#2b3142;font-size:.98rem;line-height:1.5}
+.coach li+li{margin-top:3px}
+.fed{display:flex;align-items:center;gap:12px;margin-top:22px;font-weight:600;color:#2b3142}
+.fed svg{width:28px;height:28px;color:var(--blue);flex:none}
+
+/* Galería */
+.gal{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:220px;gap:12px}
+.gal button{padding:0;border:0;border-radius:12px;overflow:hidden;cursor:zoom-in;background:var(--ink-3);min-width:0}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease,opacity .3s}
+.gal button:hover img{transform:scale(1.05)}
+.gal .g1{grid-column:span 2;grid-row:span 2}
+.gal .g2{grid-row:span 2}
+.gal .g5,.gal .g6{grid-column:span 2}
+dialog.lb{padding:0;border:0;background:transparent;max-width:min(94vw,1300px);max-height:92vh}
+dialog.lb::backdrop{background:rgba(4,6,12,.92)}
+dialog.lb img{max-width:min(94vw,1300px);max-height:84vh;width:auto;height:auto;border-radius:10px;margin:0 auto}
+dialog.lb p{color:#dfe3ec;text-align:center;margin-top:10px;font-size:.95rem}
+.lb-close{position:absolute;top:8px;right:8px;width:44px;height:44px;border-radius:50%;border:0;background:rgba(10,14,25,.85);color:#fff;font-size:1.6rem;line-height:1;cursor:pointer}
+
+/* Horario */
+.horario{background:var(--ink-2)}
+.h-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:48px;align-items:center}
+.estado{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:999px;background:var(--ink-3);font-weight:700;margin-top:22px}
+.estado i{width:11px;height:11px;border-radius:50%;background:#7c859c}
+.estado.abierto i{background:#22c55e;box-shadow:0 0 0 5px rgba(34,197,94,.18)}
+.estado.cerrado i{background:#ef4444}
+.tabla{width:100%;border-collapse:collapse;font-size:1.05rem}
+.tabla caption{text-align:left;color:var(--muted);font-size:.92rem;padding-bottom:12px}
+.tabla th,.tabla td{padding:15px 16px;border-bottom:1px solid var(--line);text-align:left}
+.tabla th{font-weight:600;color:#dfe3ec}
+.tabla td{color:#fff;font-variant-numeric:tabular-nums}
+.tabla td.cerr{color:var(--muted)}
+.tabla tr.hoy th,.tabla tr.hoy td{background:rgba(30,79,214,.22)}
+.tabla tr.hoy th::after{content:"Hoy";margin-left:10px;font:700 .7rem/1 var(--body);letter-spacing:.1em;text-transform:uppercase;background:var(--blue);color:#fff;padding:4px 7px;border-radius:999px;vertical-align:middle}
+.nota{color:var(--muted);font-size:.95rem;margin-top:16px}
+
+/* Opiniones */
+.ops{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.op{margin:0;background:var(--ink-3);border-radius:var(--radius);padding:24px 22px;display:flex;flex-direction:column;gap:14px;border-top:4px solid var(--blue);min-width:0}
+.op:nth-child(even){border-top-color:var(--red)}
+.op .stars{color:#ffc93c;letter-spacing:2px;font-size:1.05rem}
+.op blockquote{margin:0;color:#e3e7ef;font-size:1rem;line-height:1.55;flex:1}
+.op figcaption{font-weight:700;color:#fff}
+.op figcaption span{display:block;font-weight:500;color:var(--muted);font-size:.88rem}
+.ops-foot{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px;align-items:center;color:var(--muted)}
+.ops-foot a{color:#fff;font-weight:700}
+
+/* Clase de prueba */
+.prueba{position:relative;background:var(--blue);overflow:hidden;isolation:isolate}
+.p-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.prueba h2{font-size:clamp(2.6rem,6vw,4.4rem)}
+.prueba .eyebrow{color:#fff;opacity:.85}
+.prueba .intro{margin-top:18px;font-size:1.12rem;color:#eef2ff;max-width:30em}
+.pasos{list-style:none;margin:28px 0 0;padding:0;display:grid;gap:14px;counter-reset:p}
+.pasos li{counter-increment:p;display:flex;gap:14px;align-items:flex-start;color:#fff;font-weight:500}
+.pasos li::before{content:counter(p);flex:none;width:34px;height:34px;border-radius:50%;background:#fff;color:var(--blue);font:400 1.1rem/34px var(--display);text-align:center}
+.form{background:#fff;color:var(--paper-ink);border-radius:18px;padding:28px;box-shadow:0 30px 60px rgba(4,10,40,.35)}
+.form h3{font-size:1.9rem;color:var(--paper-ink)}
+.form .sub{color:var(--paper-muted);margin:6px 0 20px;font-size:.98rem}
+.campo{margin-bottom:16px}
+.campo>label,.campo legend{display:block;font-weight:700;margin-bottom:7px;font-size:.98rem;padding:0}
+.campo input[type=text],.campo select{width:100%;min-height:50px;border:2px solid #c9cdd8;border-radius:10px;padding:10px 14px;font:500 1rem var(--body);color:var(--paper-ink);background:#fff}
+.campo input[type=text]:focus,.campo select:focus{border-color:var(--blue);outline:3px solid rgba(30,79,214,.25);outline-offset:0}
+fieldset.campo{border:0;margin:0 0 16px;padding:0;min-width:0}
+.opciones{display:flex;flex-wrap:wrap;gap:8px}
+.opciones label{position:relative;display:inline-flex}
+.opciones input{position:absolute;opacity:0;width:1px;height:1px}
+.opciones span{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;border:2px solid #c9cdd8;border-radius:999px;font-weight:600;cursor:pointer;color:#2b3142}
+.opciones input:checked+span{background:var(--paper-ink);border-color:var(--paper-ink);color:#fff}
+.opciones input:focus-visible+span{outline:3px solid var(--blue);outline-offset:2px}
+.form .btn{width:100%;margin-top:6px;font-size:1.05rem}
+.form .legal{font-size:.86rem;color:var(--paper-muted);margin-top:12px;text-align:center}
+
+/* Contacto */
+.c-grid{display:grid;grid-template-columns:1fr 1.25fr;gap:40px;align-items:stretch}
+.datos{display:grid;gap:22px;align-content:start}
+.dato{display:flex;gap:16px;align-items:flex-start}
+.dato svg{width:26px;height:26px;color:var(--red-2);flex:none;margin-top:3px}
+.dato strong{display:block;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-bottom:3px}
+.dato a{display:inline-block;padding:4px 0}
+.dato a,.dato p{font-size:1.15rem;color:#fff;font-weight:600;text-decoration:none}
+.dato a:hover{text-decoration:underline}
+.mapa{border-radius:var(--radius);overflow:hidden;background:var(--ink-3);min-height:360px;border:1px solid var(--line)}
+.mapa iframe{width:100%;height:100%;min-height:360px;border:0;display:block;filter:grayscale(.25)}
+
+/* Pie */
+.pie{border-top:1px solid var(--line);padding:36px 0 44px;color:var(--muted);font-size:.95rem}
+.pie .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between}
+.pie .brand img{height:36px}
+
+/* Aparición al hacer scroll */
+.rev{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+.rev.vis{opacity:1;transform:none}
+
+/* Tablet */
+@media (max-width:1040px){
+  .disc{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .card-img{aspect-ratio:16/11}
+  .ops{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .facts ul{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .facts li:nth-child(3){border-left:0}
+  .facts li:nth-child(n+3){border-top:1px solid var(--line)}
+  .club-grid,.h-grid,.p-grid,.c-grid{grid-template-columns:1fr;gap:36px}
+  .fachada{position:static}
+}
+@media (max-width:880px){
+  .nav,.top .btn-top{display:none}
+  .burger{display:inline-flex}
+  .menu-movil{position:absolute;left:0;right:0;top:100%;background:var(--ink);border-bottom:1px solid var(--line);padding:8px 20px 20px}
+  .menu-movil.abierto{display:block}
+  .menu-movil a{display:block;padding:14px 4px;border-bottom:1px solid var(--line);text-decoration:none;font-weight:600;font-size:1.1rem}
+  .menu-movil a.btn{display:flex;justify-content:center;margin-top:16px;width:100%;border-bottom:0;padding:.75em 1.35em;font-size:1.05rem}
+}
+/* Móvil */
+@media (max-width:640px){
+  body{font-size:1rem}
+  .wrap{padding:0 16px}
+  .top .wrap{min-height:62px;gap:10px}
+  .brand img{height:36px}
+  .brand-txt{display:none}
+  .hero{min-height:auto}
+  .hero::after{background:linear-gradient(0deg,rgba(10,14,25,1) 0%,rgba(10,14,25,.82) 50%,rgba(10,14,25,.35) 100%)}
+  .hero .wrap{padding-top:150px;padding-bottom:44px}
+  .hero-cta .btn{flex:1 1 100%}
+  .ticker li{font-size:1.1rem}
+  .facts ul{grid-template-columns:1fr}
+  .facts li{border-left:0;border-top:1px solid var(--line);padding:18px 16px}
+  .facts li:first-child{border-top:0}
+  .sec{padding:68px 0}
+  .sec-head{margin-bottom:30px}
+  .disc{grid-template-columns:1fr}
+  .card-img{aspect-ratio:16/10}
+  .gal{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px;gap:8px}
+  .gal .g1{grid-column:span 2;grid-row:span 2}
+  .gal .g2{grid-row:span 2}
+  .gal .g5,.gal .g6{grid-column:span 2}
+  .tabla th,.tabla td{padding:13px 10px}
+  .ops{grid-template-columns:1fr}
+  .form{padding:22px 18px}
+  .mapa,.mapa iframe{min-height:300px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rev{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Knock Out Club, inicio">
+      <span class="brand-badge"><img src="img/logo-knockout.png" alt="" width="340" height="227"></span>
+      <span class="brand-txt">Ermua</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="#disciplinas">Disciplinas</a>
+      <a href="#club">El club</a>
+      <a href="#horario">Horario</a>
+      <a href="#opiniones">Opiniones</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <a class="btn btn-red btn-top" href="#prueba">Clase de prueba</a>
+    <button class="burger" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu-movil">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+  <nav class="menu-movil" id="menu-movil" aria-label="Menú móvil">
+    <a href="#disciplinas">Disciplinas</a>
+    <a href="#club">El club</a>
+    <a href="#horario">Horario</a>
+    <a href="#opiniones">Opiniones</a>
+    <a href="#contacto">Contacto</a>
+    <a class="btn btn-red" href="#prueba">Pide tu clase de prueba</a>
+  </nav>
+</header>
+
+<main id="contenido">
+
+<section class="hero" id="inicio" aria-labelledby="titulo">
+  <div class="hero-img">
+    <img src="img/sala-ring.jpg" srcset="img/sala-ring-800.jpg 800w, img/sala-ring.jpg 1600w" sizes="100vw" alt="Sala de Knock Out Club con el ring de boxeo, sacos colgados, remos y bicis de aire" width="1600" height="900" fetchpriority="high">
+  </div>
+  <div class="wrap">
+    <span class="kicker">Gimnasio de contacto · Ermua</span>
+    <h1 id="titulo">Boxeo y<br><em>Muay Thai</em><br>en Ermua</h1>
+    <p class="lead">Una nave grande con ring, sacos y zona de fuerza, y dos entrenadores federados que te corrigen desde el primer día. Da igual que no te hayas puesto nunca unos guantes.</p>
+    <div class="hero-cta">
+      <a class="btn btn-red" href="#prueba">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        Pide tu clase de prueba
+      </a>
+      <a class="btn btn-ghost" href="#horario">Ver horario</a>
+    </div>
+    <a class="rating" href="https://www.google.com/maps/place/KNOCK+OUT+CLUB/data=!4m7!3m6!1s0xd4e2b07e16d30af:0x71af18e54ccca96f!8m2!3d43.1852416!4d-2.5097424!16s%2Fg%2F11hd4zy85f" target="_blank" rel="noopener">
+      <span class="stars" aria-hidden="true">★★★★★</span>
+      <span><b>4,7</b> en Google · 58 opiniones</span>
+    </a>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <ul><li>Boxeo</li><li>Muay Thai</li><li>Kick Boxing</li><li>Krav Maga</li><li>Defensa personal</li><li>Preparación física</li></ul>
+    <ul><li>Boxeo</li><li>Muay Thai</li><li>Kick Boxing</li><li>Krav Maga</li><li>Defensa personal</li><li>Preparación física</li></ul>
+  </div>
+</div>
+
+<div class="facts">
+  <div class="wrap">
+    <ul>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="7" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17.5" cy="9" r="2.4"/><path d="M15.5 14.4c.6-.2 1.3-.4 2-.4 2.5 0 4.5 2 4.5 4.5"/></svg>
+        <div><strong>Para todas las edades</strong><span>Empieces de cero o vengas de otro deporte</span></div>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.6-3 8.6-7 10-4-1.4-7-5.4-7-10V6z"/><path d="M8.8 12l2.2 2.2 4.3-4.4"/></svg>
+        <div><strong>Entrenadores federados</strong><span>Titulación nacional de boxeo</span></div>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="7" width="18" height="12" rx="1"/><path d="M3 11h18M3 15h18M5 7V4M19 7V4"/></svg>
+        <div><strong>Ring y nave equipada</strong><span>Sacos, tatami, remos y zona de pesas</span></div>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+        <div><strong>Mañana y tarde</strong><span>De lunes a viernes, y sábados por la mañana</span></div>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<section class="sec" id="disciplinas" aria-labelledby="t-disc">
+  <div class="wrap">
+    <div class="sec-head rev">
+      <div><span class="eyebrow">Disciplinas</span><h2 id="t-disc">Qué puedes entrenar</h2></div>
+      <p>Puedes centrarte en una sola o combinarlas. Si no sabes por dónde empezar, te lo decimos en la clase de prueba.</p>
+    </div>
+    <div class="disc">
+      <article class="card rev">
+        <div class="card-img"><img src="img/boxeo.jpg" alt="Dos alumnas trabajando golpeo con escudo sobre el tatami, junto al ring" width="600" height="600" loading="lazy"></div>
+        <div class="card-body">
+          <h3><small>El de siempre</small>Boxeo</h3>
+          <p>Guardia, desplazamientos y técnica de golpeo. Mucho saco y manoplas, y subes al ring a hacer guanteo cuando estás preparado.</p>
+        </div>
+      </article>
+      <article class="card rev">
+        <div class="card-img"><img src="img/sudadera.jpg" alt="Paos, guantes y la sudadera del club sobre la lona del ring" width="900" height="1200" loading="lazy" style="object-position:50% 65%"></div>
+        <div class="card-body">
+          <h3><small>Puños, piernas, rodillas</small>Muay Thai y Kick Boxing</h3>
+          <p>Patadas, rodillazos y clinch, con trabajo de paos y mucha condición física. Lo dirige un entrenador de muay thai que además es árbitro.</p>
+        </div>
+      </article>
+      <article class="card rev">
+        <div class="card-img"><img src="img/grupo.jpg" alt="Grupo de alumnas posando en el tatami al terminar una clase" width="1200" height="675" loading="lazy"></div>
+        <div class="card-body">
+          <h3><small>Krav Maga</small>Defensa personal</h3>
+          <p>Técnicas sencillas pensadas para situaciones reales, que funcionan aunque estés nervioso. Con monitores titulados por la Federación Europea de Krav Maga.</p>
+        </div>
+      </article>
+      <article class="card rev">
+        <div class="card-img"><img src="img/cross.jpg" alt="Alumnos haciendo peso muerto con barra en la zona de fuerza" width="675" height="1200" loading="lazy" style="object-position:50% 70%"></div>
+        <div class="card-body">
+          <h3><small>Fuerza y cardio</small>Preparación física</h3>
+          <p>Barras, kettlebells, remos y bicis de aire. Para ponerte en forma o para llegar fuerte al combate.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sec club" id="club" aria-labelledby="t-club">
+  <div class="wrap">
+    <div class="sec-head rev">
+      <div><span class="eyebrow">El club</span><h2 id="t-club">Una nave hecha para entrenar</h2></div>
+      <p>Nos encuentras en Bizkaia Etorbidea, en la nave azul con el gorila boxeador en la puerta.</p>
+    </div>
+    <div class="club-grid">
+      <figure class="fachada rev" style="margin:0">
+        <img src="img/fachada.jpg" alt="Fachada azul de Knock Out Club con el rótulo Knockout, un gorila con guantes de boxeo pintado y el escudo de Krav Maga Ermua" width="1400" height="619" loading="lazy">
+        <figcaption>La entrada del club, en los pabellones 6 y 7.</figcaption>
+      </figure>
+      <div class="club-text rev">
+        <p>Knock Out Club ocupa dos pabellones con ring, zona de sacos, tatami y una sala de fuerza con material de sobra. Es un espacio grande, con material para varias disciplinas a la vez.</p>
+        <p>Las clases las dan Jose Manuel e Isabel. En las opiniones se repite lo mismo: entrenadores exigentes y pacientes, y muy buen ambiente entre compañeros.</p>
+        <div class="coaches">
+          <div class="coach">
+            <h3>Jose Manuel Alonso</h3>
+            <p class="role">Director técnico y primer entrenador</p>
+            <ul>
+              <li>Entrenador nacional de boxeo</li>
+              <li>Entrenador de kick boxing, K-1 y muay thai</li>
+              <li>Árbitro regional de muay thai</li>
+              <li>Monitor de Krav Maga por la Federación Europea</li>
+            </ul>
+          </div>
+          <div class="coach">
+            <h3>Isabel Gómez</h3>
+            <p class="role">Entrenadora</p>
+            <ul>
+              <li>Entrenadora regional de boxeo</li>
+              <li>Instructora de defensa personal</li>
+              <li>Asistente técnica de Krav Maga por la Federación Europea</li>
+            </ul>
+          </div>
+        </div>
+        <p class="fed">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="6"/><path d="M8.5 14l-1.5 7 5-2.5 5 2.5-1.5-7"/></svg>
+          Club afiliado a la Federación Vasca de Boxeo
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="instalaciones" aria-labelledby="t-gal">
+  <div class="wrap">
+    <div class="sec-head rev">
+      <div><span class="eyebrow">Instalaciones</span><h2 id="t-gal">La nave por dentro</h2></div>
+      <p>Toca cualquier foto para verla en grande.</p>
+    </div>
+    <div class="gal rev">
+      <button class="g1" type="button" data-full="img/sala-ring.jpg"><img src="img/sala-ring-800.jpg" alt="Zona de sacos y neumáticos con el ring al fondo" loading="lazy" width="800" height="450"></button>
+      <button class="g2" type="button" data-full="img/pesas.jpg"><img src="img/pesas.jpg" alt="Zona de pesas con barras olímpicas y discos de colores" loading="lazy" width="675" height="1200"></button>
+      <button type="button" data-full="img/banco.jpg"><img src="img/banco.jpg" alt="Alumna haciendo press de banca en la sala de fuerza" loading="lazy" width="900" height="900"></button>
+      <button type="button" data-full="img/sudadera.jpg"><img src="img/sudadera.jpg" alt="Sudadera del club con el logo de los carneros sobre el ring, junto a guantes y paos" loading="lazy" width="900" height="1200"></button>
+      <button class="g5" type="button" data-full="img/kettlebells.jpg"><img src="img/kettlebells.jpg" alt="Kettlebells de todos los pesos ordenadas por colores" loading="lazy" width="1000" height="563"></button>
+      <button class="g6" type="button" data-full="img/ring.jpg"><img src="img/ring.jpg" alt="Vista frontal del ring de boxeo" loading="lazy" width="1200" height="675"></button>
+    </div>
+  </div>
+  <dialog class="lb" id="lb" aria-label="Foto ampliada">
+    <button class="lb-close" type="button" aria-label="Cerrar foto">×</button>
+    <img src="" alt="">
+    <p></p>
+  </dialog>
+</section>
+
+<section class="sec horario" id="horario" aria-labelledby="t-hor">
+  <div class="wrap h-grid">
+    <div class="rev">
+      <span class="eyebrow">Horario</span>
+      <h2 id="t-hor" style="font-size:clamp(2.4rem,5.4vw,4rem)">Abrimos mañana y tarde</h2>
+      <p class="nota" style="font-size:1.05rem;color:#d4d9e4;max-width:30em">Este es el horario del gimnasio. Las clases de cada disciplina van por grupos; escríbenos y te pasamos el cuadro de esta temporada.</p>
+      <p class="estado" id="estado" role="status"><i aria-hidden="true"></i><span>Horario de apertura</span></p>
+    </div>
+    <div class="rev">
+      <table class="tabla">
+        <caption>Horario de apertura</caption>
+        <tbody>
+          <tr data-d="1"><th scope="row">Lunes</th><td>9:30 – 13:00 · 16:30 – 21:00</td></tr>
+          <tr data-d="2"><th scope="row">Martes</th><td>9:30 – 13:00 · 16:30 – 21:00</td></tr>
+          <tr data-d="3"><th scope="row">Miércoles</th><td>9:30 – 13:00 · 16:30 – 21:00</td></tr>
+          <tr data-d="4"><th scope="row">Jueves</th><td>9:30 – 13:00 · 16:30 – 21:00</td></tr>
+          <tr data-d="5"><th scope="row">Viernes</th><td>9:30 – 13:00 · 16:30 – 21:00</td></tr>
+          <tr data-d="6"><th scope="row">Sábado</th><td>10:00 – 13:00</td></tr>
+          <tr data-d="0"><th scope="row">Domingo</th><td class="cerr">Cerrado</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="opiniones" aria-labelledby="t-ops">
+  <div class="wrap">
+    <div class="sec-head rev">
+      <div><span class="eyebrow">Opiniones</span><h2 id="t-ops">Lo que dicen en Google</h2></div>
+      <p>4,7 de media con 58 opiniones. Estas son algunas, copiadas tal cual.</p>
+    </div>
+    <div class="ops">
+      <figure class="op rev">
+        <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <blockquote><p>«Excelente club. Instalaciones muy buenas, horario amplio y los entrenadores realmente preparados y exigentes. Se nota la profesionalidad en cada clase. Además se pueden practicar diferentes disciplinas. Totalmente recomendable.»</p></blockquote>
+        <figcaption>Marta Torres<span>Opinión en Google</span></figcaption>
+      </figure>
+      <figure class="op rev">
+        <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <blockquote><p>«Un club genial con unas instalaciones grandes y muy preparadas. Maestros fantásticos, pacientes y con mucho conocimiento. Compañeros muy amables y muy buen rollo en general.»</p></blockquote>
+        <figcaption>Eneko Lapeyra<span>Opinión en Google</span></figcaption>
+      </figure>
+      <figure class="op rev">
+        <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <blockquote><p>«Me apunté a clases en grupo e individuales y eran buenísimas. El espacio es enorme, con material estupendo para varias disciplinas. Soy mejor boxeador por haber entrado por sus puertas.»</p></blockquote>
+        <figcaption>Tim Duthie<span>Opinión en Google</span></figcaption>
+      </figure>
+      <figure class="op rev">
+        <div class="stars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <blockquote><p>«Gimnasio de 10, buen ambiente, y los dueños son entrañables. Un buen sitio para hacer deporte.»</p></blockquote>
+        <figcaption>Jose Luis Padreda<span>Opinión en Google</span></figcaption>
+      </figure>
+    </div>
+    <div class="ops-foot rev">
+      <span>¿Ya entrenas con nosotros?</span>
+      <a href="https://www.google.com/maps/place/KNOCK+OUT+CLUB/data=!4m7!3m6!1s0xd4e2b07e16d30af:0x71af18e54ccca96f!8m2!3d43.1852416!4d-2.5097424!16s%2Fg%2F11hd4zy85f" target="_blank" rel="noopener">Ver todas las opiniones en Google</a>
+    </div>
+  </div>
+</section>
+
+<section class="sec prueba" id="prueba" aria-labelledby="t-prueba">
+  <div class="wrap p-grid">
+    <div class="rev">
+      <span class="eyebrow">Clase de prueba</span>
+      <h2 id="t-prueba">Ven, prueba y decide</h2>
+      <p class="intro">Antes de apuntarte, ven a una clase y mira el ambiente y el nivel. Sin compromiso.</p>
+      <ol class="pasos">
+        <li>Rellena el formulario o escríbenos por WhatsApp.</li>
+        <li>Te decimos qué clase te encaja y a qué hora.</li>
+        <li>Vienes con ropa de deporte y agua. Lo demás lo hablamos aquí.</li>
+      </ol>
+    </div>
+    <form class="form rev" id="form-prueba" novalidate>
+      <h3>Quiero probar</h3>
+      <p class="sub">Se abre WhatsApp con tu mensaje ya escrito.</p>
+      <div class="campo">
+        <label for="f-nombre">Tu nombre</label>
+        <input type="text" id="f-nombre" name="nombre" autocomplete="given-name" required>
+      </div>
+      <div class="campo">
+        <label for="f-disc">¿Qué te gustaría probar?</label>
+        <select id="f-disc" name="disciplina">
+          <option>Boxeo</option>
+          <option>Muay Thai</option>
+          <option>Kick Boxing</option>
+          <option>Defensa personal / Krav Maga</option>
+          <option>Preparación física</option>
+          <option>Todavía no lo sé</option>
+        </select>
+      </div>
+      <fieldset class="campo">
+        <legend>¿Cuándo te viene mejor?</legend>
+        <div class="opciones">
+          <label><input type="radio" name="franja" value="por la mañana"><span>Mañanas</span></label>
+          <label><input type="radio" name="franja" value="por la tarde" checked><span>Tardes</span></label>
+          <label><input type="radio" name="franja" value="el sábado"><span>Sábado</span></label>
+        </div>
+      </fieldset>
+      <fieldset class="campo">
+        <legend>¿Has entrenado antes?</legend>
+        <div class="opciones">
+          <label><input type="radio" name="nivel" value="empiezo de cero" checked><span>Empiezo de cero</span></label>
+          <label><input type="radio" name="nivel" value="ya he entrenado algo"><span>Ya he entrenado</span></label>
+        </div>
+      </fieldset>
+      <button class="btn btn-red" type="submit">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.4.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3z"/></svg>
+        Enviar por WhatsApp
+      </button>
+      <p class="legal">No guardamos ningún dato: el mensaje sale de tu móvil.</p>
+    </form>
+  </div>
+</section>
+
+<section class="sec" id="contacto" aria-labelledby="t-cont">
+  <div class="wrap">
+    <div class="sec-head rev">
+      <div><span class="eyebrow">Contacto</span><h2 id="t-cont">Dónde estamos</h2></div>
+      <p>En Bizkaia Etorbidea, pabellones 6 y 7. Busca la nave azul con el rótulo Knockout.</p>
+    </div>
+    <div class="c-grid">
+      <div class="datos rev">
+        <div class="dato">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+          <div><strong>Dirección</strong><p>Bizkaia Etorbidea 35 A, pabellón 6-7<br>48260 Ermua (Bizkaia)</p></div>
+        </div>
+        <div class="dato">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+          <div><strong>Teléfono y WhatsApp</strong><a href="tel:+34647417900">647 41 79 00</a></div>
+        </div>
+        <div class="dato">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+          <div><strong>Horario</strong><p>L a V 9:30 – 13:00 y 16:30 – 21:00<br>Sábados 10:00 – 13:00</p></div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <a class="btn btn-red" href="https://wa.me/34647417900?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20las%20clases" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=KNOCK%20OUT%20CLUB%2C%20Etorbidea%20Bizkaia%2035A%2C%2048260%20Ermua" target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+      </div>
+      <div class="mapa rev">
+        <iframe title="Mapa de Knock Out Club en Ermua" src="https://www.google.com/maps?q=KNOCK+OUT+CLUB,+Etorbidea+Bizkaia+35A,+48260+Ermua&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="pie">
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Knock Out Club, volver arriba"><span class="brand-badge"><img src="img/logo-knockout.png" alt="" width="340" height="227" loading="lazy"></span></a>
+    <p>Knock Out Club · Bizkaia Etorbidea 35 A, pabellón 6-7 · 48260 Ermua</p>
+    <p>© <span id="anio">2026</span> Knock Out Club</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Menú móvil
+  var burger=document.querySelector('.burger'),menu=document.getElementById('menu-movil');
+  function cerrarMenu(){menu.classList.remove('abierto');burger.setAttribute('aria-expanded','false');burger.setAttribute('aria-label','Abrir menú')}
+  burger.addEventListener('click',function(){
+    var abierto=menu.classList.toggle('abierto');
+    burger.setAttribute('aria-expanded',abierto?'true':'false');
+    burger.setAttribute('aria-label',abierto?'Cerrar menú':'Abrir menú');
+  });
+  menu.addEventListener('click',function(e){if(e.target.closest('a'))cerrarMenu()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.classList.contains('abierto')){cerrarMenu();burger.focus()}});
+
+  // Abierto ahora (hora de Ermua)
+  var tramos={1:[[570,780],[990,1260]],2:[[570,780],[990,1260]],3:[[570,780],[990,1260]],4:[[570,780],[990,1260]],5:[[570,780],[990,1260]],6:[[600,780]],0:[]};
+  function hhmm(m){return Math.floor(m/60)+':'+String(m%60).padStart(2,'0')}
+  try{
+    var p=new Intl.DateTimeFormat('en-GB',{timeZone:'Europe/Madrid',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+    var get=function(t){return (p.find(function(x){return x.type===t})||{}).value};
+    var dia={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[get('weekday')];
+    var ahora=parseInt(get('hour'),10)%24*60+parseInt(get('minute'),10);
+    var fila=document.querySelector('.tabla tr[data-d="'+dia+'"]');if(fila)fila.classList.add('hoy');
+    var est=document.getElementById('estado'),txt=est.querySelector('span');
+    var dentro=(tramos[dia]||[]).find(function(t){return ahora>=t[0]&&ahora<t[1]});
+    if(dentro){est.classList.add('abierto');txt.textContent='Abierto ahora · cierra a las '+hhmm(dentro[1])}
+    else{
+      est.classList.add('cerrado');
+      var sig=(tramos[dia]||[]).find(function(t){return t[0]>ahora});
+      if(sig){txt.textContent='Cerrado ahora · abre a las '+hhmm(sig[0])}
+      else{
+        var nombres=['el domingo','el lunes','el martes','el miércoles','el jueves','el viernes','el sábado'];
+        for(var i=1;i<=7;i++){var d=(dia+i)%7;if(tramos[d].length){txt.textContent='Cerrado ahora · abre '+(i===1?'mañana':nombres[d])+' a las '+hhmm(tramos[d][0][0]);break}}
+      }
+    }
+  }catch(e){}
+
+  // Galería ampliada
+  var lb=document.getElementById('lb'),lbImg=lb.querySelector('img'),lbTxt=lb.querySelector('p');
+  document.querySelectorAll('.gal button').forEach(function(b){
+    b.addEventListener('click',function(){
+      var im=b.querySelector('img');
+      lbImg.src=b.getAttribute('data-full');lbImg.alt=im.alt;lbTxt.textContent=im.alt;
+      if(lb.showModal)lb.showModal();else window.open(b.getAttribute('data-full'),'_blank');
+    });
+  });
+  lb.querySelector('.lb-close').addEventListener('click',function(){lb.close()});
+  lb.addEventListener('click',function(e){if(e.target===lb)lb.close()});
+
+  // Formulario a WhatsApp
+  document.getElementById('form-prueba').addEventListener('submit',function(e){
+    e.preventDefault();
+    var f=e.target,nombre=f.nombre.value.trim();
+    if(!nombre){f.nombre.focus();f.nombre.setAttribute('aria-invalid','true');return}
+    f.nombre.removeAttribute('aria-invalid');
+    var disc=f.disciplina.value,franja=f.franja.value,nivel=f.nivel.value;
+    var msg='Hola, soy '+nombre+'. Me gustaría hacer una clase de prueba de '+(disc==='Todavía no lo sé'?'lo que me recomendéis':disc.toLowerCase())+', mejor '+franja+'. '+(nivel==='empiezo de cero'?'Empiezo de cero.':'Ya he entrenado algo antes.');
+    window.open('https://wa.me/34647417900?text='+encodeURIComponent(msg),'_blank','noopener');
+  });
+
+  // Aparición suave al hacer scroll
+  var els=document.querySelectorAll('.rev');
+  if('IntersectionObserver' in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vis');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
+    els.forEach(function(el){io.observe(el)});
+  }else{els.forEach(function(el){el.classList.add('vis')})}
+
+  document.getElementById('anio').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
